@@ -66,10 +66,7 @@ class Conversions {
     let num = parseInt(decimal);
     let bin = "";
     while(num >= 0) {
-      if (num === 1) {
-        bin += "1";
-        break;
-      } else if (num === 0){
+      if (num === 0){
         break;
       } else {
         let rem = num % 2;
@@ -81,19 +78,16 @@ class Conversions {
 
   decimalToOctal(decimal) {
     let num = parseInt(decimal);
-    let bin = "";
+    let octal = "";
     while(num >= 0) {
-      if (num === 1) {
-        bin += "1";
-        break;
-      } else if (num === 0){
+      if (num === 0){
         break;
       } else {
         let rem = num % 8;
         num = Math.floor(num/8);
-        bin += rem;
+        octal += rem;
       }
-    } return bin.split("").reverse().join("");
+    } return octal.split("").reverse().join("");
   }
 
   decimalToHex(decimal) {
